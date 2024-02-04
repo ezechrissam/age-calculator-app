@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character set and viewport configuration -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title of the web page -->
+  <title>Age calculator app</title>
+  
+  <!-- Linking to Google Fonts API to import the Poppins font styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  
+  <!-- Linking to an external CSS file for styling -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Adding a favicon for the website -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+</head>
+<body>
+
+  <!-- Container to hold the form and result display -->
+  <div class="container">
+  
+    <!-- Form for user input with a function call on submit -->
+    <form action="" id="submit-form" onsubmit="return callMe()">
+    
+      <!-- Input field for the day with a label and placeholder -->
+      <div class="input-container">
+        <label for="day" class="title">Day</label>
+        <input type="number" placeholder="DD" name="day" id="day" class="input-box ">
+        <!-- Warning message for invalid input -->
+        <p class="warning">Must be a valid day</p>
+      </div>
+      
+      <!-- Input field for the month with a label and placeholder -->
+      <div class="input-container">
+        <label for="month" class="title">Month</label>
+        <input type="number" placeholder="MM" name="month" id="month" class="input-box ">
+        <!-- Warning message for invalid input -->
+        <p class="warning">Must be a valid month</p>
+      </div>
+      
+      <!-- Input field for the year with a label and placeholder -->
+      <div class="input-container">
+        <label for="year" class="title">Year</label>
+        <input type="number" placeholder="YYYY" name="year" id="year" class="input-box ">
+        <!-- Warning message for invalid input -->
+        <p class="warning">Must be a valid year</p>
+      </div>
+      
+      <!-- Submit button with an arrow icon -->
+      <div class="arrow"><input type="image" src="images/icon-arrow.svg" id="submit-img" ></div>
+    </form>
+    
+    <!-- Horizontal line for visual separation -->
+    <hr>
+    
+    <!-- Result display section with placeholders for years, months, and days -->
+    <div class="headers">
+      <h3><span id="yy">--</span> years</h3>
+      <h3><span id="mm">--</span> months</h3>
+      <h3><span id="dd">--</span> days</h3>
+    </div>
+  </div>
+
+  <!-- Linking to an external JavaScript file for functionality -->
+  <script src="script.js" defer></script>
+</body>
+</html>

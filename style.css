@@ -1,0 +1,222 @@
+/* Global styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles, including background color, font family, and layout properties */
+body {
+    background-color: hsl(0, 0%, 94%);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the result headers (h3) */
+h3 {
+    font-size: 6.25rem;
+    color: hsl(0, 0%, 8%);
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1.1;
+}
+
+/* Styling for the colored span within the result headers */
+h3 span {
+    color: hsl(259, 100%, 65%);
+}
+
+/* Warning message styles with initial hidden visibility */
+.warning {
+    color: hsl(0, 100%, 67%);
+    font-size: .88rem;
+    font-weight: 400;
+    font-style: italic;
+    padding-top: 8px;
+    visibility: hidden;
+}
+
+/* Container styling for the main content */
+.container {
+    background-color: white;
+    width: 840px;
+    max-width: 840px;
+    min-height: 650px;
+    padding: 54px;
+    border-radius: 24px 24px 200px 24px;
+    margin: 0 20px;
+}
+
+/* Form styling with flex layout and spacing between elements */
+form {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+/* Styling for individual input containers */
+.input-container {
+    max-width: 160px;
+}
+
+/* Label styling for input fields */
+label {
+    text-transform: uppercase;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+    display: block;
+    width: fit-content;
+}
+
+/* Input box styling with specific font size, weight, and border properties */
+.input-box {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 1rem;
+    border: none;
+    width: 100%;
+    height: 72px;
+    border-radius: 10px;
+    outline: hsl(0, 0%, 86%) solid 1px;
+    color: hsl(0, 0%, 8%);
+}
+
+/* Additional styling for input appearance in WebKit browsers */
+input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+/* Styling for input placeholder text */
+input::placeholder {
+    color: hsl(0, 1%, 44%);
+    opacity: .75;
+}
+
+/* Styling for input focus state */
+input:focus {
+    outline: hsl(259, 100%, 65%) solid 1px;
+}
+
+/* Styling for the arrow container with transition on hover */
+.arrow {
+    width: 96px;
+    height: 96px;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s ease;
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    overflow: hidden;
+}
+
+/* Arrow container styling on hover */
+.arrow:hover {
+    background-color: hsl(0, 0%, 8%);
+}
+
+/* Styling for the submit button image inside the arrow container */
+#submit-img {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+}
+
+/* Horizontal line styling */
+hr {
+    margin: 32px 0 54px;
+}
+
+/* Styling for error state of input boxes */
+.input-box.error {
+    outline: hsl(0, 100%, 67%) solid 1px;
+}
+
+/* Styling for error state of labels */
+label.error {
+    color: hsl(0, 100%, 67%);
+}
+
+/* Styling for error state of warning messages */
+.warning.error {
+    visibility: visible;
+}
+
+/* Media query for responsive design at screens with a maximum width of 700px */
+@media screen and (max-width: 700px) {
+    body {
+        align-items: start;
+        height: auto;
+    }
+
+    /* Adjusted styling for the container in smaller screens */
+    .container {
+        padding: 48px 20px;
+        margin-top: 88px;
+        min-height: auto;
+        border-radius: 24px 24px 100px 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Adjusted styling for the form in smaller screens */
+    form {
+        gap: 1rem;
+        margin: auto;
+    }
+
+    /* Adjusted styling for individual input containers in smaller screens */
+    .input-container {
+        max-width: 85px;
+    }
+
+    /* Adjusted styling for result headers in smaller screens */
+    h3 {
+        font-size: 3rem;
+    }
+
+    /* Adjusted styling for warning messages in smaller screens */
+    .warning {
+        font-size: .75rem;
+        text-align: center;
+        padding-top: 2px;
+        line-height: 1.1;
+    }
+
+    /* Adjusted styling for labels in smaller screens */
+    label {
+        font-size: .88rem;
+        letter-spacing: 3px;
+    }
+
+    /* Adjusted styling for input boxes in smaller screens */
+    .input-box {
+        height: 54px;
+        font-size: 1.25rem;
+        padding: .5rem;
+    }
+
+    /* Adjusted styling for the arrow container in smaller screens */
+    .arrow {
+        width: 64px;
+        height: 64px;
+        bottom: -65px;
+        right: 0;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* Adjusted styling for the submit button image in smaller screens */
+    #submit-img {
+        padding: 16px;
+    }
+};
